@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bbbbbb"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:src="@drawable/ic_rotate"
+            />
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:text="여기를 눌러서 메뉴를 추가하세요"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_circle" />
+
+
+        <com.szugyi.circlemenu.view.CircleLayout
+            android:id="@+id/circle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal|center_vertical">
+
+        </com.szugyi.circlemenu.view.CircleLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/btn_menu_delete"
+            app:cpb_cornerRadius="45dp"
+            app:cpb_iconComplete="@drawable/ic_action_accept"
+            app:cpb_iconError="@drawable/ic_action_cancel"
+            app:cpb_textIdle="메뉴 삭제"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="@color/cpb_white"
+            android:textSize="23sp" />
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/btn_auto"
+            app:cpb_cornerRadius="45dp"
+            app:cpb_iconComplete="@drawable/ic_action_accept"
+            app:cpb_iconError="@drawable/ic_action_cancel"
+            app:cpb_textIdle="자동 돌리기(연타 하세요!)"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:textColor="@color/cpb_white"
+            android:textSize="23sp" />
+
+    </LinearLayout>
+</LinearLayout>

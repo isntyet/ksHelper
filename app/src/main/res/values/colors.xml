@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FCAF16</color>
+    <color name="baseRed">#FF0000</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray_light">#99C9C9C9</color>
+    <color name="color_black_light">#99000000</color>
+
+    <color name="list_divider">#dedede</color>
+    <color name="bg_bubble_self">#E1E1E1</color>
+
+    <!--스케쥴 칼라 버튼-->
+    <color name="color_btn_1">#00000000</color>
+    <color name="color_btn_2">#FF9E9D</color>
+    <color name="color_btn_3">#FFD1AB</color>
+    <color name="color_btn_4">#FFFB9C</color>
+    <color name="color_btn_5">#99FF9C</color>
+    <color name="color_btn_6">#98FFF0</color>
+    <color name="color_btn_7">#A7A6FF</color>
+    <color name="color_btn_8">#FF8FC9</color>
+
+    <!--기타-->
+
+
+</resources>

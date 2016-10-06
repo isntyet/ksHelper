@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.ks.dblab.kshelper"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 2
+        versionName "1.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile ('com.mxn.soul:flowingdrawer-core:1.2.0'){
+        exclude group: 'com.nineoldandroids', module: 'library'
+    }
+    compile ('com.github.zzz40500:AndroidSweetSheet:1.1.0'){
+        exclude group: 'com.nineoldandroids', module: 'library'
+    }
+    compile group: project.KAKAO_SDK_GROUP, name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+    // 카카오톡 sdk를 사용하기 위해 필요.
+    compile group: project.KAKAO_SDK_GROUP, name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
+    // push sdk를 사용하기 위해 필요.
+    compile group: project.KAKAO_SDK_GROUP, name: 'push', version: project.KAKAO_SDK_VERSION
+
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'info.hoang8f:fbutton:1.0.5'
+    compile 'com.orhanobut:dialogplus:1.11@aar'
+
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    //compile "com.google.android.gms:play-services:8.3.0"
+    compile 'com.google.android.gms:play-services-gcm:8.3.0'
+    compile files('libs/libDaumMapAndroid.jar')
+
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+    compile 'com.github.markushi:circlebutton:1.1'
+    compile 'net.htmlparser.jericho:jericho-html:3.4'
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
+
+    compile 'com.github.szugyi:Android-CircleMenu:1.1.1'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.github.lzyzsd:circleprogress:1.1.0@aar'
+    compile 'com.github.ParkSangGwon:TedPermission:v1.0.12'
+
+}

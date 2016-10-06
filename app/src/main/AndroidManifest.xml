@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ks.dblab.kshelper">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 전화 권한 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 지도 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- 윈도우 다이얼로그 권한 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- START Added for GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission
+        android:name="com.ks.dblab.kshelper.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ks.dblab.kshelper.permission.C2D_MESSAGE" />
+    <!-- END Added for GCM -->
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/main_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".main.MainActivity"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+
+        <activity
+            android:name=".activity.WebviewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".login.SignupActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".bus.BusActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".map.MapActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".food.FoodActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".desk.DeskActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mcc.MccMainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mcc.MccNewsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mcc.MccTimeTableActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".lost.LostActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".lost.LostWriteActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".lost.LostDetailActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sale.SaleActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sale.SaleWriteActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sale.SaleDetailActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".roulette.RouletteActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".schedule.ScheduleActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".calculator.CalculatorActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".call.CallActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".setup.SetupActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".setup.NoticeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".setup.MasterActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="2569be8dfdb37a4debccdf3295e68c1a" />
+
+        <meta-data
+            android:name="com.kakao.sdk.GcmProjectId"
+            android:value="853073024603" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".chat.ChatActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.ChatRoomActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".chat.ChatActivity" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".chat.ChatActivity" />
+        </activity>
+
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.ks.dblab.kshelper" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".chat.gcm.MyGcmPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".chat.gcm.GcmIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".etc.DialogViewService" >
+        </service>
+
+    </application>
+
+</manifest>

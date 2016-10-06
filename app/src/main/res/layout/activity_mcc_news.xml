@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#bbbbbb"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="모든 컨텐츠(기사)는 저작권법의 보호를 받고 있으며, \n무단 전재ㆍ복사ㆍ배포 등을 금합니다.(기사의 모든 권한은 'MCC'에 있습니다.)"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical|center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:dividerHeight="10dp"
+        android:divider="#00000000"
+        >
+
+
+    </ListView>
+
+
+</LinearLayout>

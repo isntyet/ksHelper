@@ -1,0 +1,85 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ks.dblab.kshelper.main.MainActivity"
+
+    >
+
+    <item
+        android:icon="@drawable/main_btn_bus"
+        android:orderInCategory="100"
+        android:title="버스"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_chat"
+        android:orderInCategory="100"
+        android:title="경성톡"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_map"
+        android:orderInCategory="100"
+        android:title="지도"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_food"
+        android:orderInCategory="100"
+        android:title="교내식당"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_desk"
+        android:orderInCategory="100"
+        android:title="열람실정보"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_call"
+        android:orderInCategory="100"
+        android:title="교내 전화"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_date"
+        android:orderInCategory="100"
+        android:title="학사일정"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_schedule"
+        android:orderInCategory="100"
+        android:title="시간표"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_mcc"
+        android:orderInCategory="100"
+        android:title="MCC"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_lost"
+        android:orderInCategory="100"
+        android:title="분실물 찾기/\n찾아주기"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_sale"
+        android:orderInCategory="100"
+        android:title="중고장터"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_roulette"
+        android:orderInCategory="100"
+        android:title="돌려돌려돌림판"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_calculator"
+        android:orderInCategory="100"
+        android:title="학점 계산기"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_book"
+        android:orderInCategory="100"
+        android:title="도서검색"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/main_btn_setup"
+        android:orderInCategory="100"
+        android:title="설정"
+        app:showAsAction="always"/>
+
+</menu>
