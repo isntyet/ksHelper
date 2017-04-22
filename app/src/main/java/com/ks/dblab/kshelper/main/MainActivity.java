@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity {
         View view = this.setContainerView(R.layout.activity_main);
         getSupportActionBar().setTitle("경성대 헬퍼");
 
-        if (getIntent().getExtras() != null && getIntent().getExtras().getString("state").equals("kill")) {
+        if (getIntent().getExtras() != null && "kill".equals(getIntent().getExtras().getString("state"))) {
             final Intent intent = new Intent(this, SignupActivity.class);
             startActivity(intent);
             this.finish();
