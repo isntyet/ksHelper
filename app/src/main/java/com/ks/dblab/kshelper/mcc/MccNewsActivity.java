@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
@@ -14,8 +15,6 @@ import net.htmlparser.jericho.Element;
 import net.htmlparser.jericho.HTMLElementName;
 import net.htmlparser.jericho.Source;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -87,10 +86,12 @@ public class MccNewsActivity extends BaseActivity {
             ArrayList<News> data = new ArrayList<News>();
 
             try {
-                Source source = new Source(new URL("http://cms1.ks.ac.kr/mcc/Board.do?mCode=MN0008&page=1"));
+                Source source = new Source(new URL("https://cms1.ks.ac.kr/mcc/Board.do?mCode=MN0008&page=1"));
                 source.fullSequentialParse();
 
+                Log.d("asdfasdfasdf", source.toString());
                 Element li = source.getAllElementsByClass("news_list").get(0);
+                Log.d("hahah", li.toString());
                 List<Element> div = li.getAllElements(HTMLElementName.DIV);
 
                 for(int i = 0; i< div.size(); i++){
@@ -127,12 +128,8 @@ public class MccNewsActivity extends BaseActivity {
 
                 }
 
-            } catch (MalformedURLException e) {
-                //Log.d("MalformedURLException", e.toString());
-                return null;
-            } catch (IOException e) {
-                //Log.d("IOException", e.toString());
-                return null;
+            } catch(Exception e){
+
             }
 
             return data;
