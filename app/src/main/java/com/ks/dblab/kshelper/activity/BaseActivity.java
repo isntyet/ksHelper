@@ -1,7 +1,9 @@
 package com.ks.dblab.kshelper.activity;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +19,6 @@ import com.ks.dblab.kshelper.util.Preferences;
  * Created by jo on 2016-03-19.
  */
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
-
     public Preferences preference = null;
 
     protected LinearLayout llRoot = null;
@@ -80,6 +81,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     //인텐트 시킬 때
+    @TargetApi(Build.VERSION_CODES.ECLAIR)
     @Override
     public void startActivity(Intent intent) {
         super.startActivity(intent);
